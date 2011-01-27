@@ -268,6 +268,57 @@
   </model:physical>
 
   <!-- furnitures -->
+  <!-- Freezer -->
+ <model:physical name="freezer_right">
+    <xyz>-3.2 1.66 0.7</xyz>
+    <rpy>0.0 0.0 0.0</rpy>
+    <static>true</static>
+    <body:box name="box1_body">
+      <geom:box name="box1_geom">
+        <mesh>default</mesh>
+        <size>0.6 0.01 1.4</size>
+        <visual>
+          <size>0.6 0.01 1.4</size>
+          <material>Gazebo/Red</material>
+          <mesh>unit_box</mesh>
+        </visual>
+      </geom:box>
+    </body:box>
+  </model:physical>
+<model:physical name="freezer_left">
+    <xyz>-3.2 1.06 0.7</xyz>
+    <rpy>0.0 0.0 0.0</rpy>
+    <static>true</static>
+    <body:box name="box1_body">
+      <geom:box name="box1_geom">
+        <mesh>default</mesh>
+        <size>0.6 0.01 1.4</size>
+        <visual>
+          <size>0.6 0.01 1.4</size>
+          <material>Gazebo/Red</material>
+          <mesh>unit_box</mesh>
+        </visual>
+      </geom:box>
+    </body:box>
+  </model:physical>
+ <model:physical name="freezer_top">
+    <xyz>-3.2 1.36 1.4</xyz>
+    <rpy>0.0 0.0 0.0</rpy>
+    <static>true</static>
+    <body:box name="box1_body">
+      <geom:box name="box1_geom">
+        <mesh>default</mesh>
+        <size>0.6 0.6 0.01</size>
+        <visual>
+          <size>0.6 0.6 0.01</size>
+          <material>Gazebo/Red</material>
+          <mesh>unit_box</mesh>
+        </visual>
+      </geom:box>
+    </body:box>
+  </model:physical>
+
+ 
   <!-- FIX later -->
   <model:physical name="sofa_model">
     <xyz>2.625 0.595 0.225</xyz>
@@ -286,23 +337,7 @@
     </body:box>
   </model:physical>
 
-  <model:physical name="box1_model">
-    <xyz>-3.2 1.36 0.7</xyz>
-    <rpy>0.0 0.0 0.0</rpy>
-    <static>true</static>
-    <body:box name="box1_body">
-      <geom:box name="box1_geom">
-        <mesh>default</mesh>
-        <size>0.6 0.6 1.4</size>
-        <visual>
-          <size>0.6 0.6 1.4</size>
-          <material>Gazebo/Red</material>
-          <mesh>unit_box</mesh>
-        </visual>
-      </geom:box>
-    </body:box>
-  </model:physical>
-
+ 
   <model:physical name="box2_model">
     <xyz>-3.2 0.16 0.425</xyz>
     <rpy>0.0 0.0 0.0</rpy>
