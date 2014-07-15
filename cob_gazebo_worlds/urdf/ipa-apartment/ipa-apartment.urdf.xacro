@@ -24,6 +24,9 @@
     <!-- wall_ipa-->
     <xacro:include filename="$(find cob_gazebo_worlds)/urdf/ipa-apartment/wall_ipa.urdf.xacro" />
 
+    <!-- laser_marker    -->
+    <xacro:include filename="$(find cob_gazebo_worlds)/urdf/ipa-apartment/laser_marker.urdf.xacro" />
+
 
     <!--Parameters-->
 
@@ -88,6 +91,9 @@
 
     <xacro:kitchen name="kitchen">
     </xacro:kitchen>
+
+    <xacro:laser_marker name="laser_marker">
+    </xacro:laser_marker>
 
     <xacro:wall_ipa name="wall_ipa">
     </xacro:wall_ipa>

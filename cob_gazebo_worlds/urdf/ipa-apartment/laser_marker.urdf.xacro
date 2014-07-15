@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="laser_marker" params="name">
+
+
+  <link name="marker1">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="5.0" />
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="marker1">
+     <laserRetro>251</laserRetro>
+  </gazebo>
+
+  <joint name="joint_marker1" type="fixed">
+    <origin xyz="${-size_total_x/2+dist_axis_x+wall_depth+0.7} ${size_total_y/4-0.455-dist_axis_y} 0.2" rpy="0 0 0" />
+    <parent link="dummy_link" />
+    <child link="marker1" />
+  </joint>
+
+
+   <link name="marker2">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="5.0" />
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="marker2">
+     <laserRetro>251</laserRetro>
+  </gazebo>
+
+  <joint name="joint_marker2" type="fixed">
+    <origin xyz="${-size_total_x/2+dist_axis_x+wall_depth+0.7} ${size_total_y/4+0.755-dist_axis_y} 0.2" rpy="0 0 0" />
+    <parent link="dummy_link" />
+    <child link="marker2" />
+  </joint>
+
+  <link name="marker3">
+    <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="5.0" />
+      <inertia ixx="0.0" ixy="0.0" ixz="0.0" iyy="0.0" iyz="0.0" izz="0.0" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" />
+      <geometry>
+        <box size="0.05 0.05 0.4" />
+      </geometry>
+    </collision>
+  </link>
+
+  <gazebo reference="marker3">
+     <laserRetro>251</laserRetro>
+  </gazebo>
+
+  <joint name="joint_marker3" type="fixed">
+    <origin xyz="${-size_total_x/2+dist_axis_x+wall_depth+0.7} ${size_total_y/4+1.965-dist_axis_y} 0.2" rpy="0 0 0" />
+    <parent link="dummy_link" />
+    <child link="marker3" />
+  </joint>
+
+
+        </xacro:macro>
+</robot>
